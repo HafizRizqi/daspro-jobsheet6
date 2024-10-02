@@ -19,8 +19,6 @@ public class Pemilihan2Percobaan211 {
         input11.nextLine();
         System.out.println("Apakah punya member (y/n) ? = ");
         member = input11.nextLine();
-        System.out.println("Apakah Ingin pembayaran melalui Qris (y/n)? = ");
-        qris = input11.nextLine();
 
         System.out.println("-----------------------------------------");
 
@@ -66,13 +64,6 @@ public class Pemilihan2Percobaan211 {
             System.out.println("Total Bayar = " + harga);
         } else {
             System.out.println("Member tidak valid");
-        }
-        if (qris.equals("y")) {
-            potonganHarga = 1000;
-            total_bayar -= potonganHarga;
-            System.out.println("Anda mendapatkan potongan Rp1000 karena menggunakan pembayaran Qris ");
-            System.out.println("Total Bayar menggunakan Qris = " + total_bayar);
-
         }
         System.out.println("----------------------------------------");
     }
