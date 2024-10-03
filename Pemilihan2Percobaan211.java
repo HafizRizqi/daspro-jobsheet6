@@ -5,7 +5,7 @@ public class Pemilihan2Percobaan211 {
         Scanner input11 = new Scanner(System.in);
         String member, qris;
         int pilihan_menu;
-        double diskon, harga, total_bayar = 0, potonganHarga;
+        double diskon, harga, total_bayar;
 
         System.out.println("-------------------------");
         System.out.println("===== MENU KAFE JTI =====");
