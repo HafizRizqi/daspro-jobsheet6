@@ -3,9 +3,9 @@ import java.util.Scanner;
 public class Pemilihan2Percobaan211 {
     public static void main(String[] args) {
         Scanner input11 = new Scanner(System.in);
-        String member;
+        String member, qris;
         int pilihan_menu;
-        double diskon, harga, total_bayar,jumlah_beli;
+        double diskon, harga, total_bayar = 0,jumlah_beli, potonganHarga;
 
         System.out.println("-------------------------");
         System.out.println("===== MENU KAFE JTI =====");
@@ -22,7 +22,8 @@ public class Pemilihan2Percobaan211 {
         input11.nextLine();
         System.out.println("Apakah punya member (y/n) ? = ");
         member = input11.nextLine();
-
+        System.out.println("Ingin Pembayaran menggunakan Qris (y/n) ? = ");
+        qris = input11.nextLine();
         System.out.println("-----------------------------------------");
 
         if (member.equalsIgnoreCase("y")) {
@@ -46,8 +47,7 @@ public class Pemilihan2Percobaan211 {
             } 
             total_bayar = (harga * jumlah_beli) - (harga * diskon * jumlah_beli);
             System.out.println("Total Bayar setelah diskon = " + total_bayar);
-        }
-        else if (member.equalsIgnoreCase("n")) {
+        }else if (member.equalsIgnoreCase("n")) {
             if (pilihan_menu == 1) {
                 harga = 14000;
                 System.out.println("Harga ricebowl = " + harga);
@@ -65,9 +65,16 @@ public class Pemilihan2Percobaan211 {
             }
             total_bayar = harga * jumlah_beli;
             System.out.println("Total Bayar = " + total_bayar);
-        } else {
+        } else{
             System.out.println("Member tidak valid");
+        } if (qris.equalsIgnoreCase("y")) {
+            potonganHarga = 1000;
+            total_bayar -= potonganHarga;
+            System.out.println("Anda mendapatkan potongan Rp1000 karena menggunakan pembayaran Qris ");
+            System.out.println("Total Bayar menggunakan Qris = " + total_bayar);
+
         }
-        System.out.println("----------------------------------------");
+        System.out.println("----------------------------------------"); 
     }
 }
+
