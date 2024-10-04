@@ -18,24 +18,17 @@ public class Pemilihan2Tugas11 {
             jumlahDiskon = 0.1 * hargaBuku * jumlahBuku;
             else if (jumlahBuku > 2 )
             jumlahDiskon = 0.12 * hargaBuku * jumlahBuku;
-            System.out.println("Jumlah Diskon yang di dapat : " + jumlahDiskon);
-            totalHarga = (hargaBuku * jumlahBuku) - jumlahDiskon;
-            System.out.println("Total Harga Bayar buku : " + totalHarga);
         } else if (jenisBuku.equalsIgnoreCase("novel")) {
             if (jumlahBuku > 3)
-            jumlahDiskon = 0.9 * hargaBuku * jumlahBuku;
+            jumlahDiskon = 0.09 * hargaBuku * jumlahBuku;
             else if (jumlahBuku <= 3)
-            jumlahDiskon = 0.8 * hargaBuku * jumlahBuku;
-            System.out.println("Jumlah Harga Diskon yang di dapat : " + jumlahDiskon);
-            totalHarga = (hargaBuku * jumlahBuku) - jumlahDiskon;
-            System.out.println("Total Harga Bayar buku : " + totalHarga);
+            jumlahDiskon = 0.08 * hargaBuku * jumlahBuku;
         } else if (jenisBuku.equalsIgnoreCase("Lainnya")) {
             if (jumlahBuku > 3)
-            jumlahDiskon = 0.5 * hargaBuku * jumlahBuku;
-            System.out.println("Jumlah Diskon yang di dapat : " + jumlahDiskon);
+            jumlahDiskon = 0.05 * hargaBuku * jumlahBuku;
+        } 
+        System.out.println("Jumlah Diskon yang di dapat : " + jumlahDiskon);
             totalHarga = (hargaBuku * jumlahBuku) - jumlahDiskon;
             System.out.println("Total Harga Bayar buku : " + totalHarga);
-        } else 
-        System.out.println("Masukan anda tidak dapat di proses ");
     }
 }
